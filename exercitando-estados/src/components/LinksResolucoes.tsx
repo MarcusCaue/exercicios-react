@@ -21,6 +21,10 @@ const nomeQuestoes = [
   {
     nome: "Analisador de Números Reais",
     caminho: "analisador-num-real"
+  },
+  {
+    nome: "Gerador de Números Aleatórios",
+    caminho: "numeros-aleatorios"
   }
 ]
 

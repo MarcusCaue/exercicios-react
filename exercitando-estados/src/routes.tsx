@@ -7,6 +7,7 @@ import CaixaEletronico from "./questions/CaixaEletronico"
 import ConversorMoedas from "./questions/ConversorMoedas"
 import AnalisadorNumReal from "./questions/AnalisadorNumReal"
 import Questao from "./components/Questao"
+import NumerosAleatorios from "./questions/NumerosAleatorios"
 
 export const router = createBrowserRouter([
   { 
@@ -24,7 +25,7 @@ export const router = createBrowserRouter([
           { path: "/questao/caixa-eletronico", element: <CaixaEletronico /> },
           { path: "/questao/conversor-moedas", element: <ConversorMoedas /> },
           { path: "/questao/analisador-num-real", element: <AnalisadorNumReal /> },
-          { path: "/questao/", element: <></> },
+          { path: "/questao/numeros-aleatorios", element: <NumerosAleatorios /> },
           { path: "/questao/", element: <></> },
         ] 
       }
