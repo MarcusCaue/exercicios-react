@@ -60,9 +60,17 @@ export default function AnalisadorNumReal() {
       </Entrada>
 
       <Feedback show={showFeedback} title="Resultado da Análise">
-        <ul>
-          <li>A parte inteira corresponde a: {numReal.parteInteira} </li>
-          <li>A parte decimal corresponde a: {numReal.parteDecimal} </li>
+        <ul className="list-disc text-cyan-500 pl-10">
+          <li>
+            <p className="text-gray-200">
+              A parte <span className="text-cyan-500">inteira</span> corresponde a: <span className="text-cyan-500">{numReal.parteInteira}</span>
+            </p>
+          </li>
+          <li>
+            <p className="text-gray-200">
+              A parte <span className="text-cyan-500">decimal</span> corresponde a: <span className="text-cyan-500">{numReal.parteDecimal}</span>
+            </p>
+          </li>
         </ul>
       </Feedback>
     </>
