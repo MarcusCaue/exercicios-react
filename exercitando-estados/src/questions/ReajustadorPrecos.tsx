@@ -1,5 +1,4 @@
 import { FormEvent, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import Feedback from "../components/Feedback";
 import Title from "../components/Title";
 import Entrada from "../components/Entrada";
@@ -79,8 +78,6 @@ export default function ReajustadorPrecos() {
       <Feedback title="Resultado do Reajuste" show={showFeedback} >
         {gerarSaida(price, percentual)}
       </Feedback>
-
-      <Link className="btn bg-green-500 mt-5" to="/"> Voltar </Link>
     </>
   )
 }

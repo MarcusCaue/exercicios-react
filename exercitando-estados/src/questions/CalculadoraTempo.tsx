@@ -1,5 +1,4 @@
 import { FormEvent, useRef, useState } from "react"
-import { Link } from "react-router-dom"
 import Feedback from "../components/Feedback";
 import Title from "../components/Title";
 import Entrada from "../components/Entrada";
@@ -75,8 +74,6 @@ export default function NewCalculadoraTempo() {
           <li> <span className="text-white">{segundos} segundos</span></li>
         </ul>
       </Feedback>
-
-      <Link className="btn bg-green-500 mt-5" to="/"> Voltar </Link>
     </>
   )
 }

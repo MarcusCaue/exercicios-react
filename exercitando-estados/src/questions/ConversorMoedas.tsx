@@ -1,6 +1,5 @@
 import { FormEvent, useEffect, useRef, useState } from "react"
-import { api, date } from "../../index"
-import { Link } from "react-router-dom"
+import { api, date } from "../../get-date"
 import Title from "../components/Title"
 import Entrada from "../components/Entrada"
 import Feedback from "../components/Feedback"
@@ -77,8 +76,6 @@ export default function ConversorMoedas() {
           Sendo assim, o valor informado de <span className="text-cyan-500 bold">R${valorReais.toFixed(2)}</span> equivalem a <span className="text-cyan-500 bold">US${valorDolar.toFixed(2)}</span>
         </p>
       </Feedback>
-
-      <Link to="/" className="btn bg-green-500"> Voltar </Link>
     </>
   )
 }

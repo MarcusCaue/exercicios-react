@@ -17,6 +17,10 @@ const nomeQuestoes = [
   {
     nome: "Conversor de Moedas",
     caminho: "conversor-moedas"
+  },
+  {
+    nome: "Analisador de Números Reais",
+    caminho: "analisador-num-real"
   }
 ]
 
