@@ -2,12 +2,10 @@
 export default {
   content: ["./src/**/*.{tsx,html}", "./index.html"],
   theme: {
-    extend: {
-      colors: {
-      },
+    extend: { 
       fontFamily: {
         'verdana': "Verdana, Geneva, Tahoma, sans-serif"
-      }
+      },
     },
   },
   plugins: [],

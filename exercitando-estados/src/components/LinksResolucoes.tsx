@@ -25,6 +25,14 @@ const nomeQuestoes = [
   {
     nome: "Gerador de Números Aleatórios",
     caminho: "numeros-aleatorios"
+  },
+  {
+    nome: "Sucessor e Antecessor",
+    caminho: "sucessor-antecessor"
+  },
+  {
+    nome: "Análise de uma Divisão",
+    caminho: "analise-divisao"
   }
 ]
 
