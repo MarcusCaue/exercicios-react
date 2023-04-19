@@ -33,6 +33,10 @@ const nomeQuestoes = [
   {
     nome: "Análise de uma Divisão",
     caminho: "analise-divisao"
+  },
+  {
+    nome: "Médias Aritméticas",
+    caminho: "medias"
   }
 ]
 
