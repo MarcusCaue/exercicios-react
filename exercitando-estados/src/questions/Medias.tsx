@@ -6,7 +6,7 @@ export default function Medias() {
 
   const formRef = useRef<HTMLFormElement>(null)
 
-  const [media, setMedia]= useState(0)
+  const [medias, setMedias]= useState({ simples: 0, ponderada: 0 })
   const [showFeedback, setShowFeedback] = useState(false)
 
   function enviar(event: FormEvent) {
@@ -14,16 +14,21 @@ export default function Medias() {
 
     const inputs = formRef.current?.querySelectorAll<HTMLInputElement>(".input")
 
-    const notas : string[] = []
-    const pesos : string[] = []
+    const notas : number[] = []
+    const pesos : number[] = []
 
     inputs?.forEach(element => {
-      element.classList.contains("nota") ? notas.push(element.value) : pesos.push(element.value)
+      element.classList.contains("nota") ? notas.push(parseFloat(element.value)) : pesos.push(parseFloat(element.value))
     })
 
-    console.log(notas)
-    console.log(pesos)
+    const mediaSimples = notas.reduce((somatorio, nota) => somatorio += nota) / notas.length
 
+    let somatorioNotasMultiplicadasPesos = 0 
+    notas.forEach((_nota, index) => { somatorioNotasMultiplicadasPesos += (notas[index] * pesos[index]) }) 
+    const mediaPonderada = somatorioNotasMultiplicadasPesos / (pesos.reduce((somatorio, peso) => somatorio += peso))
+
+    setMedias({ simples: mediaSimples, ponderada: mediaPonderada})
+    setShowFeedback(true)
   }
 
   return (
@@ -51,19 +56,19 @@ export default function Medias() {
 
       <hr className="my-5" />
 
-      <Feedback show={showFeedback} title="Estrutura da Divisão">
-        {/* <ul className="list-disc text-cyan-500 pl-10">
+      <Feedback show={showFeedback} title="Resultado">
+        <ul className="list-disc text-cyan-500 pl-10">
           <li>
             <p className="text-gray-200">
-              O <span className="text-cyan-500">sucessor</span> de {inputRef.current?.value} é <span className="text-cyan-500">{sucessorAntecessor.sucessor}</span>
+              A Média Aritmética <span className="text-cyan-500">Simples</span> vale: <span className="text-cyan-500">{medias.simples.toFixed(1)}</span>
             </p>
           </li>
           <li>
             <p className="text-gray-200">
-              O <span className="text-cyan-500">antecessor</span> de {inputRef.current?.value} é <span className="text-cyan-500">{sucessorAntecessor.antecessor}</span>
+               A Média Aritmética <span className="text-cyan-500">Ponderada</span> vale: <span className="text-cyan-500">{medias.ponderada.toFixed(1)}</span>
             </p>
           </li>
-        </ul> */}
+        </ul>
       </Feedback>
     </>
   )
