@@ -1,44 +1,6 @@
 import { Link } from "react-router-dom"
+import nomeQuestoes from "./nomes-caminhos-questoes.json"
 import Title from "./Title"
-
-const nomeQuestoes = [
-  {
-    nome: "Reajustador Preços",
-    caminho: "reajustador-precos"
-  },
-  {
-    nome: "Calculadora de Tempo",
-    caminho: "calculadora-tempo"
-  },
-  {
-    nome: "Caixa Eletrônico",
-    caminho: "caixa-eletronico"
-  },
-  {
-    nome: "Conversor de Moedas",
-    caminho: "conversor-moedas"
-  },
-  {
-    nome: "Analisador de Números Reais",
-    caminho: "analisador-num-real"
-  },
-  {
-    nome: "Gerador de Números Aleatórios",
-    caminho: "numeros-aleatorios"
-  },
-  {
-    nome: "Sucessor e Antecessor",
-    caminho: "sucessor-antecessor"
-  },
-  {
-    nome: "Análise de uma Divisão",
-    caminho: "analise-divisao"
-  },
-  {
-    nome: "Médias Aritméticas",
-    caminho: "medias"
-  }
-]
 
 export default function LinksResolucoes() {
   return (
